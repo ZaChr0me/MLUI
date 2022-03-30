@@ -71,5 +71,12 @@
 		"compare": "cpp",
 		"concepts": "cpp"
 	},
-	"C_Cpp.errorSquiggles": "Disabled"
+	"C_Cpp.errorSquiggles": "Disabled",
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "d:\\cours\\ProjetTransverseM2\\MLUI\\PluginSource",
+			"binaryPath": "d:\\cours\\ProjetTransverseM2\\MLUI\\PluginSource\\PluginTest",
+			"binaryArgs": []
+		}
+	]
 }
