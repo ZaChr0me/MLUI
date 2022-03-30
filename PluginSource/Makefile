@@ -1,8 +1,8 @@
 COMPILER = g++
-CFLAGS = -std=c++17 -mtune=k8 -m64 -Wall -pedantic -Wall -Wextra -Werror -Wshadow -Wconversion -Wunreachable-code -s
+CFLAGS = -std=c++17 -mtune=k8 -m64 -Wall -pedantic -Wall -Wextra -Wshadow -Wconversion -Wunreachable-code -s -Wl,--whole-archive
 COMPILE = $(COMPILER) $(CFLAGS)
-INC = -IC:\\Python310\\include
-LIBS = C:\\Python310\\libs\\python310.lib
+INC = -Wl,--whole-archive -IC:\\Python310\\include
+LIBS = C:\\Python310\\libs\\python310.lib -Wl,--no-whole-archive
 IL = $(INC) $(LIBS)
 
 #naming vars

@@ -10,3 +10,10 @@ pour compiler le plugin :
 - run **_makeDLL.bat_** ou la commande `make TYPE=library`
 
 vous aurez maintenant le dll sous le nom **_ProjectPlugin.dll_**
+
+pour utiliser le plugin :  
+pour l'instant, il n'est pas possible de charger le script python dans l'editeur unity, donc il est préférable de compiler et de placer le pyTest directement dans le dossier au coté de l'executable.
+
+- rajouter le plugin au dossier **_Assets/Plugins_** du projet unity (le créer s'il n'existe pas)
+- utiliser le script **_RunProjectPlugin.cs_**
+- vérifiez que le script se fait bien charger, en
