@@ -1,2 +1,4 @@
-print('External Python program running...')
-print('Hello World from Python program')
+def getInteger(val):
+    print('Python function getInteger() called')
+    c = val*2
+    return c

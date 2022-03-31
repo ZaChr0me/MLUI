@@ -1,0 +1,5 @@
+make.exe executable --dry-run --keep-going --print-directory
+make: Entering directory '/d/cours/ProjetTransverseM2/MLUI/PluginSource'
+g++ -std=c++17 -mtune=k8 -m64 -Wall -pedantic -Wall -Wextra -Werror -Wshadow -Wconversion -Wunreachable-code -s -o PluginTest -g src/core.cpp -IC:\\Python310\\include C:\\Python310\\libs\\python310.lib
+make: Leaving directory '/d/cours/ProjetTransverseM2/MLUI/PluginSource'
+ 
