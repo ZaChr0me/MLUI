@@ -5,7 +5,8 @@
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe build active file",
 			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
-			"args": ["-g", "main.cpp", "-o", "plugin.exe", "-std=c++17", "-I", "C:\\Python38\\include", "C:\\Python38\\libs/python38.lib"],
+			//"args": ["-g", "main.cpp", "-o", "plugin.exe", "-std=c++17", "-I", "C:\\Users\\souli\\Documents\\Travail\\EFREI\\M2\\PFE\\MLUI\\PluginSource\\python\\venv\\Scripts\\python.exe", "C:\\Users\\souli\\AppData\\Local\\Programs\\Python\\Python37\\libs/python37.lib"],
+			"args": ["-g", "main.cpp", "-o", "plugin.exe", "-std=c++17", "-I", "C:\\Users\\souli\\AppData\\Local\\Programs\\Python\\Python37\\include", "C:\\Users\\souli\\AppData\\Local\\Programs\\Python\\Python37\\libs/python37.lib"],
 			"options": {
 				"cwd": "${fileDirname}"
 			},

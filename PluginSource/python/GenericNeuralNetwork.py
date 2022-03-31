@@ -1,8 +1,30 @@
 # Imports
 # Import keras
 from keras.layers import Dense, concatenate, add
-from keras.models import Model
-from AiInput import AiInput, ChoiceAiOutput
+from keras.models import Model, load_model
+from keras.optimizer_v2.gradient_descent import SGD
+import tensorflow as tf
+
+from python.AiInput import AiInput, ChoiceAiOutput
+
+MODEL_PATHS = "./models"
+VALUE_HEAD = "value_head"
+POLICY_HEAD = "policy_head"
+
+
+def softmax_cross_entropy_with_logits(y_true, y_prediction):
+    p = y_prediction
+    pi = y_true
+
+    zero = tf.zeros(shape=tf.shape(pi), dtype=tf.float32)
+    where = tf.equal(pi, zero)
+
+    negatives = tf.fill(tf.shape(pi), -100.0)
+    p = tf.where(where, negatives, p)
+
+    loss = tf.nn.softmax_cross_entropy_with_logits(labels=pi, logits=p)
+
+    return loss
 
 
 class GenericNetwork:
@@ -14,6 +36,31 @@ class GenericNetwork:
         self.activation = activation
 
         self.model = self._build()
+
+    def predict(self, x):
+        return self.model.predict(x)
+
+    def fit(self, states, targets, epochs, verbose, validation_split, batch_size, callbacks=None):
+        return self.model.fit(states, targets, epochs=epochs, verbose=verbose, validation_split=validation_split,
+                              batch_size=batch_size, callbacks=callbacks)
+
+    def write(self, agent_version, iteration):
+        self.model.save(MODEL_PATHS + '/version_' + str(agent_version) + "_{0:0>4}".format(iteration) + '.h5')
+
+    def read(self, agent_version, iteration):
+        tmp_model = load_model(
+            MODEL_PATHS + '/version_' + str(agent_version) + "_{0:0>4}".format(iteration) + '.h5',
+            custom_objects={'softmax_cross_entropy_with_logits': softmax_cross_entropy_with_logits})
+        self.model.set_weights(tmp_model.get_weights())
+
+    def compile(self, learning_rate, momentum, loss_weights=None):
+        if loss_weights is None:
+            loss_weights = {VALUE_HEAD: 0.5, POLICY_HEAD: 0.5}
+        self.model.compile(loss={VALUE_HEAD: 'mean_squared_error', POLICY_HEAD: softmax_cross_entropy_with_logits},
+                           optimizer=SGD(lr=learning_rate, momentum=momentum),
+                           loss_weights=loss_weights
+                           )
+        return self.model
 
     def inputs(self):
         input_branches = []

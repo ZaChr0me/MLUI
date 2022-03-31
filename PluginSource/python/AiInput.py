@@ -17,7 +17,7 @@ class AiOutput:
 
     def __init__(self, model, params=None):
         if params is None:
-            params = []
+            params = [3]
         self.head = self.build(model, params)
 
     def build(self, model, params):
@@ -31,7 +31,7 @@ class AiOutput:
 
 
 class ChoiceAiOutput(AiOutput):
-    def __init__(self, model, params=[3]):
+    def __init__(self, model, params=None):
         super(ChoiceAiOutput, self).__init__(model, params)
 
     def build(self, model, params):
