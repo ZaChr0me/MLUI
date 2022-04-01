@@ -1,0 +1,350 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-msys
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+ 
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Wed Mar 30 04:02:16 2022
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Java\jdk11
+# environment
+LC_ALL = C
+# environment
+USERPROFILE = C:\Users\zenon
+# environment
+LOCALAPPDATA = C:\Users\zenon\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c62cbf78-ecdc-4f44-aa32-9c8d3a386871-sock
+# environment
+VSCODE_CWD = K:\Software\Microsoft VS Code
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# makefile (from 'Makefile', line 5)
+LIBS = C:\\Python310\\libs\\python310.lib
+# environment
+PROCESSOR_LEVEL = 23
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 6)
+IL = $(INC) $(LIBS)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_40804_HONIXUMHESUHVSEG
+# environment
+VS160COMCOMNTOOLS = C:\Program Files (x86)\Visual Studio\Common7\Tools\
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\zenon\AppData\Roaming\Code\CachedData\c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = /c/Users/zenon/AppData/Local/Temp
+# default
+.INCLUDE_DIRS = /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\zenon\OneDrive
+# environment
+INTELLIJ IDEA COMMUNITY EDITION = K:\Software\IntelliJ IDEA Community Edition 2019.2.4\bin;
+# makefile
+CURDIR := /d/cours/ProjetTransverseM2/MLUI/PluginSource
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PROGRAMFILES = C:\Program Files
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 40804
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
+# environment
+AMDRMPATH = K:\Software\Graphviz\bin
+# default
+MAKE_HOST := x86_64-pc-msys
+# makefile (from 'Makefile', line 1)
+COMPILER = g++
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := /bin/sh
+# environment
+HOMEPATH = \Users\zenon
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /k/Software/OracleDatabase18EX/dbhomeXE/bin:/k/Software/oracleDatabase/bin:/c/Program Files (x86)/Razer Chroma SDK/bin:/c/Program Files/Razer Chroma SDK/bin:/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/c/Program Files/Razer/ChromaBroadcast/bin:/c/Python310/Scripts:/c/Python310:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/k/Software/mathlab/bin:/c/Program Files (x86)/NVIDIA Corporation/DDS Utilities:/c/Java/jdk11/bin:/k/Program Files (x86)/IncrediBuild:/c/ProgramData/chocolatey/bin:/c/xampp/php:/c/ProgramData/ComposerSetup/bin:/mingw64/bin:/k/Software/WinMerge:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/k/Software/Vagrant/bin:/c/Program Files (x86)/ZeroTier/One:/k/Software/Git/cmd:/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/c/Program Files/MySQL/MySQL Shell 8.0/bin:/c/Users/zenon/AppData/Local/Microsoft/WindowsApps:/k/Software/IntelliJ IDEA Community Edition 2019.2.4/bin:/k/Software/Microsoft VS Code/bin:/k/Software/heroku/bin:/c/Users/zenon/AppData/Roaming/npm:/c/Users/zenon/AppData/Roaming/Composer/vendor/bin:/c/Users/zenon/.dotnet/tools:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/k/Software/AWS cli:/k/Software/WinSCP:/k/Software/UltraEdit_HexEdit:/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/k/Software/node.js:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Python38/include:/c/Python38/libs:/k/Software/CMake/bin:/usr/bin:/c/Ruby30-x64/bin:/c/Program Files (x86)/Razer Chroma SDK/bin:/c/Program Files/Razer Chroma SDK/bin:/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/c/Program Files/Razer/ChromaBroadcast/bin:/c/Python38/Scripts:/c/Python38:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/k/Software/mathlab/bin:/c/Program Files (x86)/NVIDIA Corporation/DDS Utilities:/c/Java/Java 13/bin:/k/Program Files (x86)/IncrediBuild:/k/Software/node.js:/c/ProgramData/chocolatey/bin:/c/xampp/php:/c/ProgramData/ComposerSetup/bin:/mingw64/bin:/k/Software/WinMerge:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDO:/k/Software/Microsoft VS Code/bin:/c/Users/zenon/AppData/Local/Microsoft/WindowsApps:/k/Software/heroku/bin:/c/Users/zenon/AppData/Roaming/npm:/c/Python38/include:/c/Python38/libs
+# environment
+COMPUTERNAME = ORI
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132321017703794705
+# environment
+QT_DEVICE_PIXEL_RATIO = auto
+# environment
+LOGONSERVER = \\ORI
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = Zénon
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 4)
+INC = -IC:\\Python310\\include
+# environment
+PROGRAMW6432 = C:\Program Files
+# makefile (from 'Makefile', line 10)
+NAME = PluginTest
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.RB;.RBW
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+SBT_HOME = C:\Program Files (x86)\sbt\
+# environment
+USERDOMAIN = ORI
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# environment
+AMDRMSDKPATH = C:\Program Files\AMD\RyzenMasterSDK\
+# makefile
+.DEFAULT_GOAL := All
+# makefile (from 'Makefile', line 9)
+TYPE = executable
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# makefile (from 'Makefile', line 11)
+BUILD = build
+# environment
+!D: = d:\cours\ProjetTransverseM2\MLUI\PluginSource
+# environment
+USERDOMAIN_ROAMINGPROFILE = ORI
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+PUBLIC = C:\Users\Public
+# makefile (from 'Makefile', line 3)
+COMPILE = $(COMPILER) $(CFLAGS)
+# environment
+APPDATA = C:\Users\zenon\AppData\Roaming
+# makefile (from 'Makefile', line 2)
+CFLAGS = -std=c++17 -mtune=k8 -m64 -Wall -pedantic -Wall -Wextra -Werror -Wshadow -Wconversion -Wunreachable-code -s
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/Zénon
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = /c/Users/zenon/AppData/Local/Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\a5dd0bb1b5faf8bdda9f91e739dfcc34-1.65.2-main-sock
+# environment
+TERM = xterm-256color
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# environment
+PT7HOME = K:\Software\Cisco Packet Tracer 7.3.0
+# environment
+OPENSSL_IA32CAP = :~0x20000000
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+PROCESSOR_REVISION = 0802
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
+# variable set hash-table stats:
+# Load=116/1024=11%, Rehash=0, Collisions=18/146=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2994251544, inode 1970324836976839): 12 files, no impossibilities.
+
+# 12 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-30 04:00:30.5804882
+#  File has been updated.
+#  Successfully updated.
+
+All: build executable clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+library: build/core.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	$(COMPILE) -shared -v -o $(NAME) $(BUILD)/core.o $(IL)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	rm build -r
+
+executable:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 18):
+	$(COMPILE) -o $(NAME) -g src/core.cpp $(IL)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+all:
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	mkdir -p $(BUILD)
+
+build/core.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	$(COMPILE) -c src/core.cpp -o $(BUILD)/core.o $(IL)
+
+.PHONY: all clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=11/1024=1%, Rehash=0, Collisions=0/31=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 23 / storage = 203 B / avg = 8 B
+# current buf: size = 8162 B / used = 203 B / count = 23 / avg = 8 B
+
+# strcache performance: lookups = 40 / hit rate = 42%
+# hash-table stats:
+# Load=23/8192=0%, Rehash=0, Collisions=0/40=0%
+# Finished Make data base on Wed Mar 30 04:02:16 2022
+
+ 
