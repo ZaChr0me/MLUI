@@ -2,7 +2,7 @@
 
 **_ML Unity Integrator_** est un projet d'intégration de machine learning pour le moteur de jeux Unity. Reposant sur les libraries [**_Tensorflow & keras_**](https://www.tensorflow.org/?hl=fr), son but est de faciliter le travail des développeurs pour utiliser de l'apprentissage machine au sein de Unity. 
 
-Ce projet a été réalisé dans le cadre d'une formation à [**_EFREI Paris_**](https://www.efrei.fr/)
+Ce projet a été réalisé pour le **_PFE (Projet de Fin d'Etude)_** dans le cadre d'une formation à [**_EFREI Paris_**](https://www.efrei.fr/)
 
 ## Contenu
 
