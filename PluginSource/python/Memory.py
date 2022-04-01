@@ -1,6 +1,6 @@
 from collections import deque
 
-from MCTS.AiVsAi import one_game_AI_versus_AI
+from MCTSAgent.AiVsAi import one_game_AI_versus_AI
 from connect4.Game import Game
 
 MEMORY_SIZE = 30000
