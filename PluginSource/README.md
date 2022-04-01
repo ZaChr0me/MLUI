@@ -46,4 +46,7 @@ Pour l'instant, il n'est pas possible de charger le script python depuis l'edite
 
 - Rajoutez le plugin au dossier **_Assets/Plugins_** du projet unity (le créer s'il n'existe pas)
 - Utilisez le script [**_RunProjectPlugin.cs_**](./RunProjectPlugin.cs) comme base
-- Vérifiez que le script se fait bien charger, en
+- Vérifiez que le script se fait bien charger, en lançant uniquement la fonction `TestPluginBase()` (retour console)
+- si c'est le cas, décommanter la fonction `TestPluginPython()` et compiler le projet pour pouvoir le lancer hors de l'éditeur
+- mettre le fichier [**_pyTest.py_**](./python/pyTest.py) dans un dossier python au coté de l'executable
+- lancer le projet compilé et regarder si le champ de texte est correct (sensé renvoyer 10)
