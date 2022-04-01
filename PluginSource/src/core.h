@@ -6,4 +6,8 @@ extern "C"
                                                          int sourceStringLength,
                                                          int returnStringMaxLength);
   __declspec(dllexport) void __stdcall TestIfPythonWorks();
+  __declspec(dllexport) int __stdcall AiDemoDecision(const int board[][7],
+                                                     int boardLenght,
+                                                     int boardHeight,
+                                                     int currentPlayer);
 }

@@ -1,19 +1,49 @@
-#WIP
+# Plugin Unity & Machine Learning (WIP)
 
-pour compiler le plugin :
+## Etat d'avancement
 
-- s'assurer que le makefile est parametré, c'est à dire
-- checker et possiblement changer la version et les emplacements des fichiers python
-- checker que le compilateur fonctionne (`g++ --version`).S'il n'est pas installé, suivre le tutoriel suivant pour windows et vs code : https://code.visualstudio.com/docs/languages/cpp ou juste installer msys2 (https://www.msys2.org/)
-- |optionel| run **_makeExe.bat_** ou la commande `make TYPE=executable`
-- |optionel| run **_PlugintTest.exe_**
-- run **_makeDLL.bat_** ou la commande `make TYPE=library`
+A l'heure actuelle le plugin peut appeler la fonction de test `getInteger()` depuis [**_pyTest.py_**](./python/pyTest.py) mais n'arrive pas à exécuter correctement le code pour demander à l'IA une décision (fonction `play()` de [**_python.AiDemo_**](./python/AiDemo.py)). 
 
-vous aurez maintenant le dll sous le nom **_ProjectPlugin.dll_**
+Il est cependant possible de jouer au puissance 4 contre l'IA de démonstration dans python en lançant directement [**_python.AiDemo_**](./python/AiDemo.py). 
 
-pour utiliser le plugin :  
-pour l'instant, il n'est pas possible de charger le script python dans l'editeur unity, donc il est préférable de compiler et de placer le pyTest directement dans le dossier au coté de l'executable.
+## Configuration python et IA
 
-- rajouter le plugin au dossier **_Assets/Plugins_** du projet unity (le créer s'il n'existe pas)
-- utiliser le script **_RunProjectPlugin.cs_**
-- vérifiez que le script se fait bien charger, en
+Tensorflow est assez capricieux vis-à-vis des versions de python. Ce projet a été réalisé sous **_Python 3.7.9_**, nous recommandons donc cette version. Tensorflow est en version **_2.8_**.
+
+Pour faire fonctionner la partie python du projet, vous aurez besoin de :
+>**_Tensorflow 2.8_**
+>>`pip install tensorflow==2.8.0`
+
+>**_Numpy_**
+>>`pip install numpy`
+
+>IPython
+>>`pip install IPython`
+
+>Scipy
+>>`pip install scipy`
+
+## Compiler le plugin :
+
+Assurez-vous que le [makefile](./Makefile) est correctement paramétré, c'est-à-dire:
+- Vérifiez et possiblement changer la version et les emplacements des fichiers python.
+    - Variable **_INC_** pour le dossier de votre **_Python/include_** 
+    - Variable **_LIBS_** pour le path de votre **_python37.lib_** (regarder dans le dossier **_/libs_** de votre python)
+- Vérifiez que le compilateur fonctionne (`g++ --version`). S'il n'est pas installé, vous pouvez suivre le tutoriel suivant pour Windows et VS Code : https://code.visualstudio.com/docs/languages/cpp ou juste installer msys2 (https://www.msys2.org/)
+
+>`|Optionel|` Compilez le code au format exe et testez le:
+>- run [**_makeExe.bat_**](./makeExe.bat) ou la commande `make TYPE=executable`
+>- run **_PlugintTest.exe_**
+
+Compilez le fichier dll
+- run [**_makeDLL.bat_**](./makeDLL.bat) ou la commande `make TYPE=library`
+
+Vous aurez maintenant le dll sous le nom **_ProjectPlugin.dll_**
+
+## Utilisation du plugin
+
+Pour l'instant, il n'est pas possible de charger le script python depuis l'editeur unity, donc il est préférable de placer le module [python](./python) directement dans le dossier au côté de l'exécutable.
+
+- Rajoutez le plugin au dossier **_Assets/Plugins_** du projet unity (le créer s'il n'existe pas)
+- Utilisez le script [**_RunProjectPlugin.cs_**](./RunProjectPlugin.cs) comme base
+- Vérifiez que le script se fait bien charger, en

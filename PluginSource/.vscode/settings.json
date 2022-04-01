@@ -69,7 +69,8 @@
 		"random": "cpp",
 		"cctype": "cpp",
 		"compare": "cpp",
-		"concepts": "cpp"
+		"concepts": "cpp",
+		"*.tcc": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Disabled",
 	"makefile.launchConfigurations": [
