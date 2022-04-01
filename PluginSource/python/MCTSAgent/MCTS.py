@@ -1,7 +1,7 @@
 import numpy as np
 
-from MCTS.Edge import Edge
-from MCTS.Node import Node
+from MCTSAgent.Edge import Edge
+from MCTSAgent.Node import Node
 from connect4.Game import GameState, GRID_SHAPE
 
 EPSILON = 0.2

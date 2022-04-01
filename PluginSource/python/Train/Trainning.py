@@ -6,8 +6,8 @@ import tensorflow as tf
 from keras.utils.vis_utils import plot_model
 
 from AiInput import REG_CONST
-from MCTS.Agent import Agent
-from MCTS.AiVsAi import AI_versus_AI
+from MCTSAgent.Agent import Agent
+from MCTSAgent.AiVsAi import AI_versus_AI
 from Memory import feed_memory, Memory
 from Train.Residual_CNN import Residual_CNN, HIDDEN_CNN_LAYERS, VALUE_HEAD, POLICY_HEAD, DRIVE_PATH
 from connect4.Game import GRID_SHAPE

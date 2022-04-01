@@ -2,9 +2,9 @@ import random
 
 import numpy as np
 
-from MCTS.MCTS import MCTS
-from MCTS.Node import Node
-from connect4.Game import GRID_SHAPE
+from python.MCTSAgent.MCTS import MCTS
+from python.MCTSAgent.Node import Node
+from python.connect4.Game import GRID_SHAPE
 
 
 class Agent():

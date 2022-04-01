@@ -18,6 +18,16 @@ int main()
 
   cout << "it should output 20 if everything is working :\n"
        << ATestFunction(10);
+
+  const int board[6][7] = {{0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0},
+                           {0, 0, 0, 0, 0, 0, 0}};
+  int choice = AiDemoDecision(board, 7, 6, 1);
+  cout << "\nAi call gave a decision :\n"
+       << choice;
   return 0;
 }
 float ExamplePluginFunction() { return 5.0F; }
@@ -82,4 +92,61 @@ void TestIfPythonWorks()
   Py_InitializeEx(0);
   PyRun_SimpleString("print('Hello World from Embedded Python!!!')");
   Py_Finalize();
+}
+
+CPyObject IntArrayToBoard(const int board[][7],
+                          int boardLenght,
+                          int boardHeight)
+{
+  CPyObject pBoard = PyList_New(boardHeight);
+  if (!pBoard)
+    throw logic_error("Unable to allocate memory for Python list");
+  for (int heighIdx = 0; heighIdx < boardHeight; heighIdx++)
+  {
+    CPyObject pLine = PyList_New(boardLenght);
+    for (int lenIdx = 0; lenIdx < boardLenght; lenIdx++)
+    {
+      CPyObject pToken = PyLong_FromLong((long)board[heighIdx][lenIdx]);
+      PyList_SetItem(pLine, lenIdx, pToken);
+      // cout << " l(" << lenIdx << "): " << (long)board[heighIdx][lenIdx];
+    }
+    PyList_SetItem(pBoard, heighIdx, pLine);
+    cout << "\nb " << heighIdx << " " << PyBytes_AS_STRING(PyUnicode_AsEncodedString(PyObject_Str(pBoard), "UTF-8", "strict"));
+  }
+  cout << "\nb " << PyBytes_AS_STRING(PyUnicode_AsEncodedString(PyObject_Str(pBoard), "UTF-8", "strict"));
+  return pBoard;
+}
+
+// TODO implement script load check to return false if failed
+// THe sourceString is used here to indicate the path of the script
+int AiDemoDecision(const int board[][7],
+                   int boardLenght,
+                   int boardHeight,
+                   int currentPlayer)
+{
+  CPyInstance pyInstance;
+  CPyObject pName = PyUnicode_FromString("python.AiDemo"); // use . instead of / and no need for ./
+  CPyObject pModule = PyImport_Import(pName);
+
+  // set value
+  CPyObject pBoard, pVal;
+  pBoard = IntArrayToBoard(board, boardLenght, boardHeight);
+  pVal = PyLong_FromLong((long)currentPlayer);
+
+  cout << "\narg initialised :\n";
+
+  // create argument
+  CPyObject pArgs;
+  pArgs = PyTuple_New(2);
+  PyTuple_SetItem(pArgs, 0, pBoard);
+  PyTuple_SetItem(pArgs, 1, pVal);
+
+  cout << "\narg tuplet created";
+
+  // get function ang call it with arguments
+  CPyObject pFunc = PyObject_GetAttrString(pModule, "play");
+  pVal = PyObject_CallObject(pFunc, pArgs);
+
+  cout << "\ndecision recovered";
+  return (int)PyLong_AsLong(pVal);
 }
